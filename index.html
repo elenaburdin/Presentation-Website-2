@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Presentation Page | Museum </title>
+</head>
+
+<body>
+
+    <!-- Page 1 (Intro) -->
+    <section id="page-1" class="page">
+        <h1>Welcome To The Vatican Museum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, tempora voluptas in incidunt nesciunt
+            quis! Cumque culpa ea voluptatem, ducimus neque quia cum expedita illum explicabo perspiciatis distinctio.
+            Repellat doloribus iusto recusandae odio esse ipsum modi ullam accusantium, quod dolores?</p>
+        <div>
+            <a href="#page-2" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section id="page-2" class="page">
+        <h1>Page 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione aliquid sunt animi minus fuga, ullam harum
+            distinctio itaque! Nulla, voluptates veritatis repudiandae illo expedita doloribus minus qui magnam vero
+            atque, veniam nam, suscipit earum deleniti! In, tenetur exercitationem! Non minima odit quae aut commodi
+            beatae repellat, molestiae laborum veritatis nemo maiores! Earum ipsam amet laudantium voluptas, omnis animi
+            necessitatibus libero.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio delectus nostrum corporis fugit rem hic a fuga
+            atque distinctio, commodi cumque sit id, nihil temporibus vitae quidem nemo eaque suscipit nobis est vero
+            in? Distinctio alias facilis earum. Ex, iure!</p>
+        <div>
+            <a href="#page-1" class="btn btn-dark">Prev Page <i class="fas fa-arrow-circle-up"></i></a>
+            <a href="#page-3" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section id="page-3" class="page">
+        <h1>Page 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, tempora voluptas in incidunt nesciunt
+            quis! Cumque culpa ea voluptatem, ducimus neque quia cum expedita illum explicabo perspiciatis distinctio.
+            Repellat doloribus iusto recusandae odio esse ipsum modi ullam accusantium, quod dolores?</p>
+        <div>
+            <a href="#page-2" class="btn btn-dark">Prev Page <i class="fas fa-arrow-circle-up"></i></a>
+            <a href="#page-4" class="btn">Next Page <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Page 4 -->
+    <section id="page-4" class="page">
+        <h1>Page 4</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, adipisci, sed accusantium optio quod labore
+            architecto id dolore harum et corrupti veritatis voluptatem, error eos dolorum repudiandae vitae deleniti
+            officiis. Voluptas modi voluptates fugit veritatis, doloremque eos ex repellendus ullam placeat cupiditate
+            tempora consequatur mollitia repudiandae, laborum velit non consectetur? Maxime aperiam ex sint! Tempora
+            harum corrupti facere, voluptatem quibusdam modi minima doloremque molestiae labore nam aut fuga ea
+            voluptatibus!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quidem ipsum! Voluptate aspernatur
+            totam neque quidem nisi corporis magni quas magnam at quaerat necessitatibus illum nihil, iste quia
+            excepturi dignissimos dolore ea vero id, ab obcaecati. Delectus amet quos similique!</p>
+        <div>
+            <a href="#page-3" class="btn">Prev Page <i class="fas fa-arrow-circle-up"></i></a>
+        </div>
+    </section>
+
+
+    <script src="https://kit.fontawesome.com/f0b3d42456.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+        // Smooth Scrolling
+        $('.btn').on('click', function (event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+                const hash = this.hash;
+                $('html, body').animate(
+                    {
+                        scrollTop: $(hash).offset().top
+                    },
+                    800
+                );
+            }
+        });
+    </script>
+
+</body>
+
+</html>
